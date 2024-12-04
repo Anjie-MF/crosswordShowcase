@@ -95,22 +95,78 @@ textarea:not([rows]) {
 
 /* ---------------------Mobile Style-------------------------*/
 body {
-  background: linear-gradient(to bottom, rgba(217, 0, 255, 0.085), #66CCFF);
-  display: flex;
+  /*background: linear-gradient(to bottom, rgba(217, 0, 255, 0.085), #66CCFF);
+   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 0; */
 }
 
 .gtkm {
   outline: 3px solid red;
-  display: none; /* HIDE until done w/ other section; wont take up space! */
+  display: show;
+}
+
+.displayDate {
+  outline: 3px solid black;
 }
 
 .displayDate .p {
   font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-bar {
   outline: 3px solid red;
 }
 
+.nav-menu {
+  outline: 3px dotted purple;
+  background-color: pink;
+  overflow: hidden;
+  background-color: green;
+  position: relative;
+}
+
+.nav-menu a:hover {
+  background-color: #bcb72b;
+  color: white;
+}
+
+.nav-menu #myLinks {
+  display: show;
+}
+
+.nav-menu a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.nav-bar .title {
+  outline: 3px dotted purple;
+  background-color: yellow;
+}
+
+.nav-bar .time-box {
+  outline: 3px dotted purple;
+  background: orange;
+}
+
+.myLinks-text {
+  outline: 3px solid black;
+  background-color: pink;
+  display: show;
+}
 /* ---------------------Desktop Styles-------------------------*/
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+  /* body {
+    background: linear-gradient(to right, #8B0000, #FF6347);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  } */
+
+}
