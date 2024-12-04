@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <script src="js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/106ba2589c.js" crossorigin="anonymous"></script>
+    <!-- <script src="js/script.js" defer></script> -->
     <!--add font links here -->
     <!--add font links here -->
     <title>Crossword Puzzle</title>
@@ -13,27 +14,60 @@
 
 <body>
     <main>
-        <!-- PopUp Box; use to introduce myself -->
-        <section class="gtkm">
+        <section class="gtkm"> <!--CLICK EVENT-->
             <div class="gtkm-blurb">
                 <h1>Hi, I'm Anjelica, your personal front-end developer!</h1>
                 <p>Ready to flex your brain muscles?<br>Solve this crossword puzzle to hidden facts about me and my
                     coding skills.<br>So, are you ready to accept the challenge?</p>
             </div>
-            <div class="yes-no-button">
-                <input type="button" value="Let's go!">
+            <div class="yes-no-button"> <!--CLICK EVENT-->
+                <input type="button" value="Let's go">
                 <input type="button" value="Maybe later">
             </div>
         </section>
-        <!-- Current Date -->
+        <!-- Date Display -------------------------------------------------------------->
         <section class="displayDate">
             <p id="date"></p>
             <script src="js/script.js"></script>
-
-
         </section>
-        <!-- Navigation Bar -->
-        <section class="nav-bar"></section>
+        <!-- Navigation Bar ------------------------------------------------------------>
+        <section class="nav-bar">
+            <div class="nav-menu"> <!--CLICK EVENT-->
+                <a href="javascript:void(0);" class="icon" onclick="addHere()"><i class="fa-solid fa-bars"></i></a>
+                <div id="myLinks">
+                    <a href="#htp">How to Play</a>
+                    <a href="#clear">Clear</a>
+                </div>
+            </div>
+            <div class="title">
+                <h1>"Puzzle Title"</h1>
+            </div>
+            <div class="time-box">
+                <p id="timer">00:00:00</p>
+                <button onclick="pauseTimer()"><i class="fa-solid fa-pause"></i></button>
+                <button onclick="startTimer()"><i class="fa-solid fa-play"></i></button>
+                <button onclick="resetTimer()"><i class="fa-solid fa-rotate-right"></i></button>
+                <script src="js/script.js"></script>
+            </div>
+        </section>
+        <!-- Navigation Bar Text ------------------------------------------------------->
+        <section class="myLinks-text">
+            <div class="htp-text"> <!--CLICK EVENT-->
+                <h1>How to Play</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <h2>Hint</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="clear-text"> <!--CLICK EVENT-->
+                <h1>Are you sure you want to clear the puzzle?</h1>
+                <div class="cancel-clear-button">
+                    <input type="button" value="Cancel">
+                    <input type="button" value="Clear">
+                </div>
+            </div>
+        </section>
         <!-- Actual Grid Containing Puzzle -->
         <section class="xword-grid"></section>
         <!-- Scoll Bar Containg Clues; for mobile -->
