@@ -64,7 +64,8 @@ Use this section to outline areas for future improvement in future projects. The
 
 - [Piccalil](https://piccalil.li/blog/a-more-modern-css-reset/) - My go-to CSS Reset. While working on Frontend Mentor projects, Grace Snow provided valuable feedback about my CSS style. She strongly suggested using a CSS reset to improve my code's cleanliness and efficiency. 
 
-- [Website Name](website URL) - Description.
+- [w3schools](https://www.w3schools.com/howto/howto_js_mobile_navbar.asp) - Used this site to learn how to write the HTML & CSS for the navigation menu.
+
 - [Website Name](website URL) - Description.
 - [Website Name](website URL) - Description.
 
@@ -81,8 +82,14 @@ Use this section to outline areas for future improvement in future projects. The
 
 ```For the crossword puzzle, write the "Across" clues focusing on programming languages and technologies, while the "Down" clues emphasize professional traits.```
 
+- OpenAI - [ChatGPT](chat.openai.com) - I used an AI companion (ChatGPT) to help create a personal Q&A framework for understanding the new concepts I learned while building this project. The prompt I used to guide the discussion was:
+
+```Ok, I tried to google this answer and got a multitude of solutions. How do I learn what to google? I don't want to copy and paste. I want to learn the fundamentals behind it. Like, what articles do I need to read to come to the answer you did?```
+
+This process helped me deepen my understanding and learn to independently explore related topics effectively.
+
 ## Acknowledgments
 
-- Skillcrush -  [Skillcrush](https://www.skillcrush.com) -More than just a coding academy. It is a supportive community with a rigorous curriculum that fostered my growth as a developer, enabling me to tackle this project with unwavering determination. 🖤 🖤 
+- Skillcrush -  [Skillcrush](https://www.skillcrush.com) - More than just a coding academy. It is a supportive community with a rigorous curriculum that fostered my growth as a developer, enabling me to tackle this project with unwavering determination. 🖤 🖤 
 
 - Frontend Mentor - [Frontend Mentor](https://www.frontendmentor.io/) -  Building on my foundation from Skillcrush, I've actively sought opportunities to expand my developer portfolio. These projects have allowed me to hone my skills in accessibility and technical documentation. By customizing the Frontend Mentor README template, I've incorporated these learnings into my own projects.
