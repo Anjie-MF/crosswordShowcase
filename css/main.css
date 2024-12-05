@@ -94,17 +94,12 @@ textarea:not([rows]) {
    ========================================================================== */
 
 /* ---------------------Mobile Style-------------------------*/
-body {
-  /*background: linear-gradient(to bottom, rgba(217, 0, 255, 0.085), #66CCFF);
-   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0; */
-}
+body {}
 
 .gtkm {
   outline: 3px solid red;
-  display: show;
+  display: none;
+  /*dont forget me*/
 }
 
 .displayDate {
@@ -114,6 +109,8 @@ body {
 .displayDate .p {
   font-family: 'Courier New', Courier, monospace;
 }
+
+/* General styles for the Nav Bar -------------------------*/
 
 .nav-bar {
   outline: 3px solid red;
@@ -133,7 +130,8 @@ body {
 }
 
 .nav-menu #myLinks {
-  display: show;
+  display: none;
+  /*dont forget me*/
 }
 
 .nav-menu a {
@@ -157,16 +155,154 @@ body {
 .myLinks-text {
   outline: 3px solid black;
   background-color: pink;
-  display: show;
+  display: none;
+  /*dont forget me*/
 }
-/* ---------------------Desktop Styles-------------------------*/
-@media only screen and (min-width: 768px) {
-  /* body {
-    background: linear-gradient(to right, #8B0000, #FF6347);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-  } */
 
+/* General styles for the xword grid section ---------------------- */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(14, 1fr);
 }
+
+#grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 50px;
+  height: 50px; */
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+/* General styles for the clue section ---------------------- */
+.clues {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  outline: 3px dotted black;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#slides {
+  width: 100%;
+  position: relative;
+}
+
+#overflow {
+  overflow: hidden;
+  width: 100%;
+}
+
+.inner {
+  display: flex;
+  width: 1000%;
+  transition: transform 0.5s ease;
+}
+
+.frame {
+  flex: 1 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: pink;
+}
+
+#frame1:checked~#slides .inner {
+  transform: translateX(0%);
+}
+
+#frame2:checked~#slides .inner {
+  transform: translateX(-10%);
+}
+
+#frame3:checked~#slides .inner {
+  transform: translateX(-20%);
+}
+
+#frame4:checked~#slides .inner {
+  transform: translateX(-30%);
+}
+
+#frame5:checked~#slides .inner {
+  transform: translateX(-40%)
+}
+
+#frame6:checked~#slides .inner {
+  transform: translateX(-50%);
+}
+
+#frame7:checked~#slides .inner {
+  transform: translateX(-60%);
+}
+
+#frame8:checked~#slides .inner {
+  transform: translateX(-70%);
+}
+
+#frame9:checked~#slides .inner {
+  transform: translateX(-80%);
+}
+
+#frame10:checked~#slides .inner {
+  transform: translateX(-90%);
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#controls button {
+  background-color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#controls button:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* #controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#controls label {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#controls label:hover,
+input[type="radio"]:checked+#controls label {
+  background: #333;
+} */
+
+/* ---------------------Desktop Styles-------------------------*/
+@media only screen and (min-width: 768px) {}
