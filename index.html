@@ -2,77 +2,169 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <script src="https://kit.fontawesome.com/106ba2589c.js" crossorigin="anonymous"></script>
-    <!-- <script src="js/script.js" defer></script> -->
-    <!--add font links here -->
-    <!--add font links here -->
-    <title>Crossword Puzzle</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="js/script.js" defer></script>
+  <script src="https://kit.fontawesome.com/106ba2589c.js" crossorigin="anonymous"></script>
+  <!--add font links here -->
+  <!--add font links here -->
+  <title>Crossword Puzzle</title>
 </head>
 
 <body>
-    <main>
-        <section class="gtkm"> <!--CLICK EVENT-->
-            <div class="gtkm-blurb">
-                <h1>Hi, I'm Anjelica, your personal front-end developer!</h1>
-                <p>Ready to flex your brain muscles?<br>Solve this crossword puzzle to hidden facts about me and my
-                    coding skills.<br>So, are you ready to accept the challenge?</p>
+  <main>
+    <section class="gtkm"> <!--CLICK EVENT-->
+      <div class="gtkm-blurb">
+        <h1>Hi, I'm Anjelica, your personal front-end developer!</h1>
+        <p>Ready to flex your brain muscles?<br>Solve this crossword puzzle to hidden facts about me and my
+          coding skills.<br>So, are you ready to accept the challenge?</p>
+      </div>
+      <div class="yes-no-button"> <!--CLICK EVENT-->
+        <input type="button" value="Let's go">
+        <input type="button" value="Maybe later">
+      </div>
+    </section>
+    <!-- Date Display -------------------------------------------------------------->
+    <section class="displayDate">
+      <p id="date"></p>
+    </section>
+    <!-- Navigation Bar ------------------------------------------------------------>
+    <section class="nav-bar">
+      <div class="nav-menu"> <!--CLICK EVENT-->
+        <a href="javascript:void(0);" class="icon" onclick="addHere()"><i class="fa-solid fa-bars"></i></a>
+        <div id="myLinks">
+          <a href="#htp">How to Play</a>
+          <a href="#clear">Clear</a>
+        </div>
+      </div>
+      <div class="title">
+        <h1>"Puzzle Title"</h1>
+      </div>
+      <div class="time-box">
+        <p id="timer">00:00:00</p>
+        <button onclick="pauseTimer()"><i class="fa-solid fa-pause"></i></button>
+        <button onclick="startTimer()"><i class="fa-solid fa-play"></i></button>
+        <button onclick="resetTimer()"><i class="fa-solid fa-rotate-right"></i></button>
+      </div>
+    </section>
+    <!-- Navigation Bar Text ------------------------------------------------------->
+    <section class="myLinks-text">
+      <div class="htp-text"> <!--CLICK EVENT-->
+        <h1>How to Play</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <h2>Hint</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="clear-text"> <!--CLICK EVENT-->
+        <h1>Are you sure you want to clear the puzzle?</h1>
+        <div class="cancel-clear-button">
+          <input type="button" value="Cancel">
+          <input type="button" value="Clear">
+        </div>
+      </div>
+    </section>
+    <!-- Actual Grid Containing Puzzle -->
+    <section class="xword-grid">
+      <div id="grid">
+        <div data-clue="frame1">1</div>
+        <div data-clue="frame2">2</div>
+        <div data-clue="frame3">3</div>
+        <div data-clue="frame4">4</div>
+        <div data-clue="frame5">5</div>
+        <div data-clue="frame6">6</div>
+        <div data-clue="frame7">7</div>
+        <div data-clue="frame8">8</div>
+        <div data-clue="frame9">9</div>
+        <div data-clue="frame10">10</div>
+        <div data-clue="frame11">11</div>
+        <div data-clue="frame12">12</div>
+        <div data-clue="frame13">13</div>
+        <div data-clue="frame14">14</div>
+        <div data-clue="frame15">15</div>
+        <div data-clue="frame16">16</div>
+        <div data-clue="frame17">17</div>
+        <div data-clue="frame18">18</div>
+        <div data-clue="frame19">19</div>
+        <div data-clue="frame20">20</div>
+      </div>
+    </section>
+    <!-- Actual Grid Containing Puzzle -->
+    <section class="clues">
+      <input type="radio" name="frame" id="frame1" checked />
+      <input type="radio" name="frame" id="frame2" />
+      <input type="radio" name="frame" id="frame3" />
+      <input type="radio" name="frame" id="frame4" />
+      <input type="radio" name="frame" id="frame5" />
+      <input type="radio" name="frame" id="frame6" />
+      <input type="radio" name="frame" id="frame7" />
+      <input type="radio" name="frame" id="frame8" />
+      <input type="radio" name="frame" id="frame9" />
+      <input type="radio" name="frame" id="frame10" />
+      <div id="slides">
+        <div id="overflow">
+          <div class="inner">
+            <div class="frame frame_1">
+              <div class="frame-content">
+                <h2>Slide 1</h2>
+              </div>
             </div>
-            <div class="yes-no-button"> <!--CLICK EVENT-->
-                <input type="button" value="Let's go">
-                <input type="button" value="Maybe later">
+            <div class="frame frame_2">
+              <div class="frame-content">
+                <h2>Slide 2</h2>
+              </div>
             </div>
-        </section>
-        <!-- Date Display -------------------------------------------------------------->
-        <section class="displayDate">
-            <p id="date"></p>
-            <script src="js/script.js"></script>
-        </section>
-        <!-- Navigation Bar ------------------------------------------------------------>
-        <section class="nav-bar">
-            <div class="nav-menu"> <!--CLICK EVENT-->
-                <a href="javascript:void(0);" class="icon" onclick="addHere()"><i class="fa-solid fa-bars"></i></a>
-                <div id="myLinks">
-                    <a href="#htp">How to Play</a>
-                    <a href="#clear">Clear</a>
-                </div>
+            <div class="frame frame_3">
+              <div class="frame-content">
+                <h2>Slide 3</h2>
+              </div>
             </div>
-            <div class="title">
-                <h1>"Puzzle Title"</h1>
+            <div class="frame frame_4">
+              <div class="frame-content">
+                <h2>Slide 4</h2>
+              </div>
             </div>
-            <div class="time-box">
-                <p id="timer">00:00:00</p>
-                <button onclick="pauseTimer()"><i class="fa-solid fa-pause"></i></button>
-                <button onclick="startTimer()"><i class="fa-solid fa-play"></i></button>
-                <button onclick="resetTimer()"><i class="fa-solid fa-rotate-right"></i></button>
-                <script src="js/script.js"></script>
+            <div class="frame frame_5">
+              <div class="frame-content">
+                <h2>Slide 5</h2>
+              </div>
             </div>
-        </section>
-        <!-- Navigation Bar Text ------------------------------------------------------->
-        <section class="myLinks-text">
-            <div class="htp-text"> <!--CLICK EVENT-->
-                <h1>How to Play</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                <h2>Hint</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <div class="frame frame_6">
+              <div class="frame-content">
+                <h2>Slide 6</h2>
+              </div>
             </div>
-            <div class="clear-text"> <!--CLICK EVENT-->
-                <h1>Are you sure you want to clear the puzzle?</h1>
-                <div class="cancel-clear-button">
-                    <input type="button" value="Cancel">
-                    <input type="button" value="Clear">
-                </div>
+            <div class="frame frame_7">
+              <div class="frame-content">
+                <h2>Slide 7</h2>
+              </div>
             </div>
-        </section>
-        <!-- Actual Grid Containing Puzzle -->
-        <section class="xword-grid"></section>
-        <!-- Scoll Bar Containg Clues; for mobile -->
-        <section class="clues"></section>
-    </main>
+            <div class="frame frame_8">
+              <div class="frame-content">
+                <h2>Slide 8</h2>
+              </div>
+            </div>
+            <div class="frame frame_9">
+              <div class="frame-content">
+                <h2>Slide 9</h2>
+              </div>
+            </div>
+            <div class="frame frame_10">
+              <div class="frame-content">
+                <h2>Slide 10</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="controls">
+          <button id="prev">&lt;</button>
+          <button id="next">&gt;</button>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
