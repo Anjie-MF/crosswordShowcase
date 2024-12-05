@@ -1,19 +1,15 @@
-// JS for Date---------------------------------------------------------
 function displayDate() {
     const now = new Date();
     const format = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
     const currentDayDate = now.toLocaleString('en-US', format);
-    // console.log(currentDayDate);    
     document.getElementById("date").textContent = currentDayDate;
 }
 displayDate();
 
 
-// JS for Timer--------------------------------------------------------
-var timerInterval;// for starting and pausing the timer
-var timeElapsed = 0; //time in seconds
+let timerInterval;
+let timeElapsed = 0;
 
-//function to format time as HH:MM:SS
 function formatTime(seconds) {
     const h = Math.floor(seconds / 3600).toString().padStart(2, '0');
     const m = Math.floor(seconds % 3600 / 60).toString().padStart(2, '0');
@@ -21,28 +17,38 @@ function formatTime(seconds) {
     return `${m}:${s}`;
 }
 
-//function to display the timer
 function displayTime() {
     document.getElementById("timer").innerHTML = formatTime(timeElapsed);
 }
 
-//function to start the timer 
 function startTimer() {
     timerInterval = setInterval(() => {
-        timeElapsed++; //increment time elapsed
-        displayTime(); //update the displayed time
+        timeElapsed++;
+        displayTime()
     }, 1000);
 }
 
-//function to pause the timer
 function pauseTimer() {
     clearInterval(timerInterval);
 }
 
-//function to reset the timer
 function resetTimer() {
-    pauseTimer(); //stop the timer
-    timeElapsed = 0; //reset elapsed timer
-    displayTime(); //update the displayed time to 0
+    pauseTimer();
+    timeElapsed = 0;
+    displayTime();
 }
 
+
+let gridBoxes = document.querySelectorAll('#grid div');
+let radioButtons = document.querySelectorAll('input[type="radio"]');
+
+gridBoxes.forEach((box) => {
+    box.addEventListener('click', () => {
+      const clueId = box.dataset.clue; 
+      const correspondingRadio = document.getElementById(clueId);
+  
+      if (correspondingRadio) {
+        correspondingRadio.checked = true;
+      }
+    });
+  });
