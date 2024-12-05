@@ -6,7 +6,7 @@
 - [My process](#my-process)
 - [Built with](#built-with)
 - [What I learned](#what-i-learned)
-- [Continued development](#continued-development)
+- [Boilerplate](#boilerplate)
 - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Credits](#credits)
@@ -33,6 +33,7 @@
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Javascript
 
 ### What I learned
 
@@ -52,22 +53,31 @@ console.log('ðŸŽ‰')
 }
 ```
 
-### Continued development
+### Boilerplate
 
-Use this section to outline areas for future improvement in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- [Piccalil](https://piccalil.li/blog/a-more-modern-css-reset/) - My go-to CSS Reset.
+- [Website Name](website URL) - Description.
+- [Website Name](website URL) - Description.
+- [Website Name](website URL) - Description.
+
 
 ### Useful resources
 
-- [The Word Finder](https://www.thewordfinder.com/crossword-puzzle-maker/) - Used the form to generate my own crossword puzzle, which significantly helped in ensuring that the words fit well together and in providing a solid wireframe for the puzzle.
+- [The Word Finder](https://shorturl.at/eot61) - Used the form to generate my own crossword puzzle, which significantly helped in ensuring that the words fit well together and in providing a solid wireframe for the puzzle.
 
 - [SheCodes](https://shorturl.at/s5Bib) - Used to learn how to display the current date and time using the built-in `Date()` object, which helped with correct formatting, and the html as well 
 
-- [Piccalil](https://piccalil.li/blog/a-more-modern-css-reset/) - My go-to CSS Reset. While working on Frontend Mentor projects, Grace Snow provided valuable feedback about my CSS style. She strongly suggested using a CSS reset to improve my code's cleanliness and efficiency. 
+- [w3schools](https://shorturl.at/rFJlg) - Used to learn how to write the HTML & CSS for the navigation menu.
 
-- [w3schools](https://www.w3schools.com/howto/howto_js_mobile_navbar.asp) - Used this site to learn how to write the HTML & CSS for the navigation menu.
+- [geeksforgeeks](https://shorturl.at/MuHkc) - Used to learn hwo to write the HTML and CSS for the clue slider for mobile screens.
+
+- [mdn_web_docs](https://shorturl.at/Wfs3b) - Used to do a deep dive into CSS transitions.
+
+- [w3schools](https://shorturl.at/fFMqo) - Learned that navigation arrows previously seen  are not icons or fonts but HTML character entities.
 
 - [Website Name](website URL) - Description.
 - [Website Name](website URL) - Description.
+
 
 
 ## Author
