@@ -1,3 +1,7 @@
+function closeBlurb() {
+    document.getElementById("gtkm-section").style.display = "none";
+}
+
 function displayDate() {
     const now = new Date();
     const format = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
