@@ -7,165 +7,169 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script src="js/script.js" defer></script>
   <script src="https://kit.fontawesome.com/106ba2589c.js" crossorigin="anonymous"></script>
-  <!--add font links here -->
-  <!--add font links here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
   <title>Crossword Puzzle</title>
 </head>
 
 <body>
   <main>
-    <section class="gtkm"> <!--CLICK EVENT-->
-      <div class="gtkm-blurb">
-        <h1>Hi, I'm Anjelica, your personal front-end developer!</h1>
-        <p>Ready to flex your brain muscles?<br>Solve this crossword puzzle to hidden facts about me and my
-          coding skills.<br>So, are you ready to accept the challenge?</p>
+    <!-- GTKM Box -->
+    <section class="gtkm" id="gtkm-section">
+      <div class="blurb">
+        <h1>Hi, I'm Anjelica!</h1>
+        <p>Ready to flex your brain muscles?<br>Test your knowledge of programming languages and essential
+          professional traits with this fun crossword puzzle!</p>
       </div>
-      <div class="yes-no-button"> <!--CLICK EVENT-->
-        <input type="button" value="Let's go">
-        <input type="button" value="Maybe later"> <!--click over to google.com or something-->
+      <div class="options">
+        <button class="yes" onclick="closeBlurb()">Let's go</button>
+        <a href="https://hackertyper.com/" class="no">Maybe later</a>
       </div>
     </section>
     <!-- Date Display -->
     <section class="displayDate">
+      <h1>Mini Crossword</h1>
       <p id="date"></p>
     </section>
     <!-- Navigation Bar -->
     <section class="nav-bar">
-      <div class="nav-menu"> <!--CLICK EVENT-->
-        <a href="javascript:void(0);" class="icon" onclick="addHere()"><i class="fa-solid fa-bars"></i></a>
-        <div id="myLinks">
-          <a href="#htp">How to Play</a>
-          <a href="#clear">Clear</a>
+      <div class="nav-menu dropdown">
+        <button class="dropbtn"><i class="fa-solid fa-bars"></i></button>
+        <div class="dropdown-content">
+          <a href="#">How to Play</a>
+          <a href="#">Clear</a>
         </div>
       </div>
       <div class="title">
-        <h1>"Puzzle Title"</h1>
+        <h1>"Tech and Traits"</h1>
       </div>
       <div class="time-box">
-        <p id="timer">00:00:00</p>
+        <p id="timer">0:00:00</p>
         <button onclick="pauseTimer()"><i class="fa-solid fa-pause"></i></button>
         <button onclick="startTimer()"><i class="fa-solid fa-play"></i></button>
         <button onclick="resetTimer()"><i class="fa-solid fa-rotate-right"></i></button>
       </div>
     </section>
-    <!-- Navigation Menu Bar Text -->
-    <section class="myLinks-text">
-      <div class="htp-text"> <!--CLICK EVENT-->
-        <h1>How to Play</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        <h2>Hint</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-      </div>
-      <div class="clear-text"> <!--CLICK EVENT-->
-        <h1>Are you sure you want to clear the puzzle?</h1>
-        <div class="cancel-clear-button">
-          <input type="button" value="Cancel">
-          <input type="button" value="Clear">
+      <!-- Navigation Menu Bar Text -->
+      <section class="myLinks-text">
+        <div class="htp-text"> <!--CLICK EVENT-->
+          <h1>How to Play</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          <h2>Hint</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         </div>
-      </div>
-    </section>
-    <!-- Actual Grid Containing Puzzle -->
-    <section class="xword-grid">
-      <div id="grid">
-        <!-- Row 1 -->
-        <div class="hidden">1</div>
-        <div class="hidden">2</div>
-        <div class="visible">3</div>
-        <div class="hidden">4</div>
-        <div class="hidden">5</div>
-        <!-- Row 2 -->
-        <div class="hidden">6</div>
-        <div class="hidden">7</div>
-        <div class="visible">8</div>
-        <div class="hidden">9</div>
-        <div class="hidden">10</div>
-        <!-- Row 3 -->
-        <div class="visible">11</div>
-        <div class="visible">12</div>
-        <div class="visible">13</div>
-        <div class="visible">14</div>
-        <div class="visible">15</div>
-        <!-- Row 4 -->
-        <div class="hidden">16</div>
-        <div class="hidden">17</div>
-        <div class="visible">18</div>
-        <div class="hidden">19</div>
-        <div class="hidden">20</div>
-        <!-- Row 5 -->
-        <div class="hidden">21</div>
-        <div class="visible">22</div>
-        <div class="visible">23</div>
-        <div class="visible">24</div>
-        <div class="visible">25</div>
-        <!-- Row 6 -->
-        <div class="hidden">26</div>
-        <div class="hidden">27</div>
-        <div class="hidden">28</div>
-        <div class="hidden">29</div>
-        <div class="visible">30</div>
-        <!-- Row 7 -->
-        <div class="hidden">31</div>
-        <div class="visible">32</div>
-        <div class="visible">33</div>
-        <div class="visible">34</div>
-        <div class="visible">35</div>
-        <!-- Row 8 -->
-        <div class="hidden">36</div>
-        <div class="hidden">37</div>
-        <div class="hidden">38</div>
-        <div class="hidden">39</div>
-        <div class="visible">40</div>
-      </div>
-    </section>
-    <!-- Container for Clues -->
-    <section class="clues">
-      <input type="radio" name="frame" id="frame1" checked>
-      <input type="radio" name="frame" id="frame2">
-      <input type="radio" name="frame" id="frame3">
-      <input type="radio" name="frame" id="frame4">
-      <input type="radio" name="frame" id="frame5">
-      <div id="slides">
-        <div id="overflow">
-          <div class="inner">
-            <div class="frame frame_1">
-              <div class="frame-content">
-                <p>JS library for building user interface</p>
+        <div class="clear-text"> <!--CLICK EVENT-->
+          <h1>Are you sure you want to clear the puzzle?</h1>
+          <div class="cancel-clear-button">
+            <input type="button" value="Cancel">
+            <input type="button" value="Clear">
+          </div>
+        </div>
+      </section>
+      <!-- Actual Grid Containing Puzzle -->
+      <section class="xword-grid">
+        <div id="grid">
+          <!-- Row 1 -->
+          <div class="hidden">1</div>
+          <div class="hidden">2</div>
+          <div class="visible">3</div>
+          <div class="hidden">4</div>
+          <div class="hidden">5</div>
+          <!-- Row 2 -->
+          <div class="hidden">6</div>
+          <div class="hidden">7</div>
+          <div class="visible">8</div>
+          <div class="hidden">9</div>
+          <div class="hidden">10</div>
+          <!-- Row 3 -->
+          <div class="visible">11</div>
+          <div class="visible">12</div>
+          <div class="visible">13</div>
+          <div class="visible">14</div>
+          <div class="visible">15</div>
+          <!-- Row 4 -->
+          <div class="hidden">16</div>
+          <div class="hidden">17</div>
+          <div class="visible">18</div>
+          <div class="hidden">19</div>
+          <div class="hidden">20</div>
+          <!-- Row 5 -->
+          <div class="hidden">21</div>
+          <div class="visible">22</div>
+          <div class="visible">23</div>
+          <div class="visible">24</div>
+          <div class="visible">25</div>
+          <!-- Row 6 -->
+          <div class="hidden">26</div>
+          <div class="hidden">27</div>
+          <div class="hidden">28</div>
+          <div class="hidden">29</div>
+          <div class="visible">30</div>
+          <!-- Row 7 -->
+          <div class="hidden">31</div>
+          <div class="visible">32</div>
+          <div class="visible">33</div>
+          <div class="visible">34</div>
+          <div class="visible">35</div>
+          <!-- Row 8 -->
+          <div class="hidden">36</div>
+          <div class="hidden">37</div>
+          <div class="hidden">38</div>
+          <div class="hidden">39</div>
+          <div class="visible">40</div>
+        </div>
+      </section>
+      <!-- Container for Clues -->
+      <section class="clues">
+        <input type="radio" name="frame" id="frame1" checked>
+        <input type="radio" name="frame" id="frame2">
+        <input type="radio" name="frame" id="frame3">
+        <input type="radio" name="frame" id="frame4">
+        <input type="radio" name="frame" id="frame5">
+        <div id="slides">
+          <div id="overflow">
+            <div class="inner">
+              <div class="frame frame_1">
+                <div class="frame-content">
+                  <p>JS library for building user interface</p>
+                </div>
               </div>
-            </div>
-            <div class="frame frame_2">
-              <div class="frame-content">
-                <p>Standard markup language for documents</p>
+              <div class="frame frame_2">
+                <div class="frame-content">
+                  <p>Standard markup language for documents</p>
+                </div>
               </div>
-            </div>
-            <div class="frame frame_3">
-              <div class="frame-content">
-                <p>High level, class-based program language
-                <p>
+              <div class="frame frame_3">
+                <div class="frame-content">
+                  <p>High level, class-based program language
+                  <p>
+                </div>
               </div>
-            </div>
-            <div class="frame frame_4">
-              <div class="frame-content">
-                <p>Ability to adjust to new conditions</p>
+              <div class="frame frame_4">
+                <div class="frame-content">
+                  <p>Ability to adjust to new conditions</p>
+                </div>
               </div>
-            </div>
-            <div class="frame frame_5">
-              <div class="frame-content">
-                <p>Ability to guide other towards goal</p>
+              <div class="frame frame_5">
+                <div class="frame-content">
+                  <p>Ability to guide other towards goal</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="controls">
-        <button id="prev">&lt;</button>
-        <span id="current-clue">Clue for 11 Across</span>
-        <button id="next">&gt;</button>
-      </div>
-    </section>
-  </main>
-</body>
-
-</html>
-
+        <div id="controls">
+          <button id="prev">&lt;</button>
+          <span id="current-clue">Clue for 11 Across</span>
+          <button id="next">&gt;</button>
+        </div>
+      </section>
+    </main>
+  </body>
+  
+  </html>
