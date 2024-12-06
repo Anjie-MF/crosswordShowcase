@@ -7,9 +7,9 @@
 - [Built with](#built-with)
 - [What I learned](#what-i-learned)
 - [Boilerplate](#boilerplate)
-- [Useful resources](#useful-resources)
+- [Useful sites](#useful-sites)
 - [Author](#author)
-- [Credits](#credits)
+- [AI prompts ](#ai-prompts)
 - [Acknowledgments](#acknowledgments)
 
 
@@ -56,12 +56,12 @@ console.log('ðŸŽ‰')
 ### Boilerplate
 
 - [Piccalil](https://piccalil.li/blog/a-more-modern-css-reset/) - My go-to CSS Reset.
-- [Website Name](website URL) - Description.
-- [Website Name](website URL) - Description.
+- [Sarah_Edo](https://cssgrid-generator.netlify.app/) - CSS Grid Generator 
+- [Dinson Kadudhus](https://responsivetesttool.com/) - Website Responsive Testing
 - [Website Name](website URL) - Description.
 
 
-### Useful resources
+### Useful Sites
 
 - [The Word Finder](https://shorturl.at/eot61) - Used the form to generate my own crossword puzzle, which significantly helped in ensuring that the words fit well together and in providing a solid wireframe for the puzzle.
 
@@ -86,11 +86,11 @@ console.log('ðŸŽ‰')
 - Frontend Mentor - [Anjie-MF](https://www.frontendmentor.io/profile/Anjie-MF)
 
 
-## Credits
+## AI prompts
 
 - Microsoft -  [CoPilot](https://copilot.microsoft.com/) - I used an AI companion (Copilot) to generate crossword clue ideas. The prompt used was:
 
-```For the crossword puzzle, write the "Across" clues focusing on programming languages and technologies, while the "Down" clues emphasize professional traits.```
+```I'm creating a crossword puzzle for my developer portfolio. Could you provide clues that focus on popular programming languages and technologies? Also, I need clues that highlight professional traits. The puzzle should fit within a 5 across and 4 down grid, totaling 20 boxes.```
 
 - OpenAI - [ChatGPT](chat.openai.com) - I used an AI companion (ChatGPT) to help create a personal Q&A framework for understanding the new concepts I learned while building this project. The prompt I used to guide the discussion was:
 
