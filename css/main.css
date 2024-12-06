@@ -94,62 +94,163 @@ textarea:not([rows]) {
    ========================================================================== */
 
 /* ---------------------Mobile Style-------------------------*/
-body {}
-
-.gtkm {
-  display: none;
-  /*dont forget me*/
+body {
+  font-family: "Merriweather", serif;
 }
 
+/* General style for gtkm----------- */
+.gtkm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 10px 15px 15px;
+  border-radius: 5px;
+  max-width: 330px;
+  width: 100%;
+  display: show;
+}
+
+.blurb h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.blurb p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 5px 0;
+  text-align: start;
+}
+
+.gtkm .options {
+  display: flex;
+  width: 100%;
+}
+
+.options button,
+.options a {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 0;
+  border: none;
+  outline: none;
+  background: #D2E3FC;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+
+.options button:hover,
+.options a:hover {
+  transform: scale(0.96);
+}
+
+.options button.yes,
+.options a.no {
+  margin-right: 5px;
+}
+
+.options a.no {
+  margin-left: 5px;
+}
+
+/* General style for Display Date ---------- */
 .displayDate {
-  border: 3px solid black;
+  border: 1px solid #333;
+  background-color: #D2E3FC;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between
 }
 
 .displayDate .p {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Merriweather", serif;
+  font-size: 1 rem;
 }
 
-/* General styles for the Nav Bar -------------------------*/
-
-.nav-bar {
-  border: 3px solid red;
+.displayDate .h1 {
+  font-size: 1rem;
 }
 
-.nav-menu {
-  border: 3px dotted purple;
-  background-color: pink;
-  overflow: hidden;
-  background-color: green;
+/* General styles for the drop down menu  -------------------------*/
+.dropbtn {
+  background-color: white;
+  color: #333;
+  padding: 16px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
   position: relative;
+  display: inline-block;
 }
 
-.nav-menu a:hover {
-  background-color: #bcb72b;
-  color: white;
-}
-
-.nav-menu #myLinks {
+.dropdown-content {
   display: none;
-  /*dont forget me*/
+  position: absolute;
+  background-color: #D2E3FC;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba((0), 0, 0, 0.2);
+  z-index: 1;
 }
 
-.nav-menu a {
-  color: white;
-  padding: 14px 16px;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
   text-decoration: none;
-  font-size: 17px;
   display: block;
 }
 
-.nav-bar .title {
-  border: 3px dotted purple;
-  background-color: yellow;
+.dropdown-content a:hover {
+  background-color: #ddd;
 }
 
-.nav-bar .time-box {
-  border: 3px dotted purple;
-  background: orange;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
+
+.dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+*/
+/* general style for the title and clock */
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: space-evenly;
+  border: 1px solid #333;
+  background-color: #D2E3FC;
+  padding: 10px;
+  gap: 10px
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+}
+
+.time-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 
 .myLinks-text {
   border: 3px solid black;
@@ -174,16 +275,16 @@ body {}
   background-color: #f0f0f0;
 }
 
-.hidden{
+.hidden {
   display: none !important;
 }
 
-.visible{
- display: flex !important;
- justify-content: center;
- align-items: center;
- border: 1px solid pink;
- cursor: pointer; 
+.visible {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid pink;
+  cursor: pointer;
 }
 
 /* General styles for the clue slider ---------------------- */
