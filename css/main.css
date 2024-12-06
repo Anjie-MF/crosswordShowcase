@@ -97,13 +97,12 @@ textarea:not([rows]) {
 body {}
 
 .gtkm {
-  outline: 3px solid red;
   display: none;
   /*dont forget me*/
 }
 
 .displayDate {
-  outline: 3px solid black;
+  border: 3px solid black;
 }
 
 .displayDate .p {
@@ -113,11 +112,11 @@ body {}
 /* General styles for the Nav Bar -------------------------*/
 
 .nav-bar {
-  outline: 3px solid red;
+  border: 3px solid red;
 }
 
 .nav-menu {
-  outline: 3px dotted purple;
+  border: 3px dotted purple;
   background-color: pink;
   overflow: hidden;
   background-color: green;
@@ -143,17 +142,17 @@ body {}
 }
 
 .nav-bar .title {
-  outline: 3px dotted purple;
+  border: 3px dotted purple;
   background-color: yellow;
 }
 
 .nav-bar .time-box {
-  outline: 3px dotted purple;
+  border: 3px dotted purple;
   background: orange;
 }
 
 .myLinks-text {
-  outline: 3px solid black;
+  border: 3px solid black;
   background-color: pink;
   display: none;
   /*dont forget me*/
@@ -162,21 +161,32 @@ body {}
 /* General styles for the xword grid section ---------------------- */
 #grid {
   display: grid;
-  grid-template-columns: repeat(18, 1fr);
-  grid-template-rows: repeat(14, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, auto);
 }
 
 #grid div {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 50px;
-  height: 50px; */
   border: 1px solid black;
   cursor: pointer;
+  background-color: #f0f0f0;
 }
 
-/* General styles for the clue section ---------------------- */
+.hidden{
+  display: none !important;
+}
+
+.visible{
+ display: flex !important;
+ justify-content: center;
+ align-items: center;
+ border: 1px solid pink;
+ cursor: pointer; 
+}
+
+/* General styles for the clue slider ---------------------- */
 .clues {
   position: relative;
   width: 100%;
@@ -190,7 +200,7 @@ input[type="radio"] {
 
 #slides {
   width: 100%;
-  position: relative;
+  max-width: fit-content;
 }
 
 #overflow {
@@ -200,18 +210,19 @@ input[type="radio"] {
 
 .inner {
   display: flex;
-  width: 1000%;
+  width: 500%;
   transition: transform 0.5s ease;
 }
 
 .frame {
-  flex: 1 0 10%;
+  flex: 1 0 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  padding: 5px;
-  background-color: pink;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #frame1:checked~#slides .inner {
@@ -219,39 +230,19 @@ input[type="radio"] {
 }
 
 #frame2:checked~#slides .inner {
-  transform: translateX(-10%);
-}
-
-#frame3:checked~#slides .inner {
   transform: translateX(-20%);
 }
 
+#frame3:checked~#slides .inner {
+  transform: translateX(-40%);
+}
+
 #frame4:checked~#slides .inner {
-  transform: translateX(-30%);
-}
-
-#frame5:checked~#slides .inner {
-  transform: translateX(-40%)
-}
-
-#frame6:checked~#slides .inner {
-  transform: translateX(-50%);
-}
-
-#frame7:checked~#slides .inner {
   transform: translateX(-60%);
 }
 
-#frame8:checked~#slides .inner {
-  transform: translateX(-70%);
-}
-
-#frame9:checked~#slides .inner {
+#frame5:checked~#slides .inner {
   transform: translateX(-80%);
-}
-
-#frame10:checked~#slides .inner {
-  transform: translateX(-90%);
 }
 
 #controls {
@@ -275,34 +266,17 @@ input[type="radio"] {
   transition: background 0.3s ease;
 }
 
-#controls button:hover {
-  background-color: #333;
-  color: white;
+#controls button:focus {
+  outline: 2px solid #fff;
+  background-color: #555;
 }
 
-/* #controls {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+#current-clue {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
 }
-
-#controls label {
-  width: 10px;
-  height: 10px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-#controls label:hover,
-input[type="radio"]:checked+#controls label {
-  background: #333;
-} */
 
 /* ---------------------Desktop Styles-------------------------*/
 @media only screen and (min-width: 768px) {}
