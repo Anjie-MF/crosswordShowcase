@@ -39,16 +39,43 @@ function resetTimer() {
 }
 
 
-let gridBoxes = document.querySelectorAll('#grid div');
-let radioButtons = document.querySelectorAll('input[type="radio"]');
+const clueText = document.getElementById("current-clue");
+const innerSlider = document.querySelector(".inner");
+const visibleBoxes = document.querySelectorAll("#grid .visible");
+const clues = [
+    "Clue for 11 Across",
+    "Clue for 22 Across",
+    "Clue for 32 Across",
+    "Clue for 3 Down",
+    "Clue for 25 Down"
+];
 
-gridBoxes.forEach((box) => {
-    box.addEventListener('click', () => {
-      const clueId = box.dataset.clue; 
-      const correspondingRadio = document.getElementById(clueId);
-  
-      if (correspondingRadio) {
-        correspondingRadio.checked = true;
-      }
+let currentClueIndex = 0;
+
+function updateClue(index) {
+    if (index >= 0 && index < clues.length) {
+        currentClueIndex = index;
+        clueText.textContent = clues[currentClueIndex];
+        innerSlider.style.transform = `translateX(-${currentClueIndex * 20}%)`
+    }
+}
+
+visibleBoxes.forEach((box, index) => {
+    box.addEventListener("click", () => {
+        updateClue(index);
     });
-  });
+});
+
+document.getElementById("prev").addEventListener("click", () => {
+    if (currentClueIndex > 0) {
+        updateClue(currentClueIndex - 1);
+    }
+});
+
+document.getElementById("next").addEventListener("click", () => {
+    if (currentClueIndex < clues.length - 1) {
+        updateClue(currentClueIndex + 1);
+    }
+});
+
+updateClue(0);
